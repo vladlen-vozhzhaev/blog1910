@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            body{
+                background: url("https://wallpapers.com/images/hd/lo-fi-desktop-ihnv4uzas0gbzwk5.jpg");
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            #plane{
+                position: absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <img id="plane" src="/img/plane.png" width="250px" alt="">
+        <script>
+            let plane = document.getElementById("plane");
+            let x = 0;
+            let moveToRight = true;
+            function movePlane(){
+                if(x >= window.innerWidth-250){
+                    moveToRight = false;
+                    plane.style.transform = "scale(-1, 1)";
+                }else if(x <= 0){
+                    moveToRight = true;
+                    plane.style.transform = "scale(1, 1)";
+                }
+                if(moveToRight){
+                    plane.style.left = x++ +"px";
+                }else{
+                    plane.style.left = x-- +"px";
+                }
+            }
+
+            plane.onclick = ()=>{
+                let parachute = document.createElement("img");
+                parachute.src = "/img/parachute.png";
+                parachute.style.width = "80px";
+                parachute.style.position = "absolute";
+                document.body.append(parachute);
+                let y = 0;
+                let startX = x;
+                parachute.style.left = startX+"px";
+                setInterval(()=>{
+                    parachute.style.top = y++ +"px";
+                    parachute.style.left = startX+y+"px";
+                }, 50)
+            }
+            setInterval(movePlane, 25);
+        </script>
+    </body>
+</html>

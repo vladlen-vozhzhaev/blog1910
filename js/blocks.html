@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .block{
+            position: absolute;
+            width: 200px;
+            height: 200px;
+        }
+        .red{
+            top: 0;
+            left: 0;
+            background: red;
+        }
+        .lime{
+            top: 0;
+            right: 0;
+            background: lime;
+        }
+        .yellow{
+            bottom: 0;
+            left: 0;
+            background: yellow;
+        }
+        .blue{
+            bottom: 0;
+            right: 0;
+            background: blue;
+        }
+        .circle{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            left: 400px;
+            top: 400px;
+            border-radius: 50px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="block red"></div>
+    <div class="block lime"></div>
+    <div class="block yellow"></div>
+    <div class="block blue"></div>
+    <script>
+        function getIntRandom(min, max){
+            return Math.floor(Math.random()*(max-min)+min);
+        }
+        let colors = ["red", "lime", "yellow", "blue"];
+        for (let i = 0; i < 5; i++) {
+            let color = colors[getIntRandom(0, colors.length)];
+            let circle = document.createElement('div');
+            circle.style.background = color;
+            circle.style.left = getIntRandom(200, window.innerWidth-300)+"px";
+            circle.style.top = getIntRandom(200, window.innerHeight-300)+"px";
+            circle.classList.add("circle"); // Добавляем класс circle
+            document.body.append(circle);
+            circle.onmousedown = (event)=>{
+                circle.style.left = event.clientX-50 + "px";
+                circle.style.top = event.clientY-50 + "px";
+                window.onmousemove = (e)=>{
+                    circle.style.left = e.clientX-50 + "px";
+                    circle.style.top = e.clientY-50 + "px";
+                }
+                window.onmouseup = ()=>{
+                    window.onmousemove = ()=>false;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
