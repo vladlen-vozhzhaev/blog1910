@@ -1,0 +1,21 @@
+<div class="container my-5">
+    <p><strong>Имя: </strong><span id="name"></span></p>
+    <p><strong>Фамилия: </strong><span id="lastname"></span></p>
+    <p><strong>Email: </strong><span id="email"></span></p>
+    <p><strong>ID: </strong><span id="userId"></span></p>
+</div>
+<script>
+    const name = document.getElementById('name');
+    const lastname = document.getElementById('lastname');
+    const email = document.getElementById('email');
+    const userId = document.getElementById('userId');
+    fetch('/php/getUserData.php')
+        .then(response=>response.json())
+        .then(result=>{
+            console.log(result);
+            name.innerText = result.name;
+            lastname.innerText = result.lastname;
+            email.innerText = result.email;
+            userId.innerText = result.id;
+        })
+</script>

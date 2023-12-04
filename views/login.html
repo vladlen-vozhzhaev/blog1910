@@ -1,12 +1,13 @@
 <div class="container my-5">
   <h1 class="text-center my-3">Авторизация на сайте</h1>
   <div class="col-sm-6 mx-auto">
-    <form action="/php/handlerLogin.php" method="post">
+    <form onsubmit="sendForm(this); return false;">
       <div class="mb-3">
         <input required name="email" type="email" class="form-control" placeholder="Email">
       </div>
       <div class="mb-3">
         <input required name="pass" type="password" class="form-control" placeholder="Пароль">
+        <p class="text-danger" hidden id="info">Нерпавильный логин или пароль</p>
       </div>
       <div class="mb-3">
         <input type="submit" class="form-control btn btn-primary" value="Войти">
@@ -14,3 +15,20 @@
     </form>
   </div>
 </div>
+<script>
+  const info = window.document.getElementById("info");
+  function sendForm(form){
+    const formData = new FormData(form);
+    fetch("/php/handlerLogin.php", {
+      method:"POST",
+      body: formData
+    }).then(response=>response.json())
+            .then(result=>{
+              if(result.result == "success"){
+                location.href = '/profile';
+              }else{
+                info.hidden = false;
+              }
+            })
+  }
+</script>

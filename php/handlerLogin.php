@@ -10,7 +10,7 @@
         $_SESSION['lastname'] = $row['lastname'];
         $_SESSION['id'] = $row['id'];
         $_SESSION['email'] = $row['email'];
-        echo "Фамилия: ".$row['lastname']."<br>Имя: ".$row['name'];
+        echo json_encode(['result'=>'success']);
     }else{
-        echo "Неправильный логин или пароль";
+        echo json_encode(['result'=>'error']);
     }

@@ -41,10 +41,10 @@
     </style>
 </head>
 <body>
-    <div class="block red"></div>
-    <div class="block lime"></div>
-    <div class="block yellow"></div>
-    <div class="block blue"></div>
+    <div class="block red" data-color="red"></div>
+    <div class="block lime" data-color="lime"></div>
+    <div class="block yellow" data-color="yellow"></div>
+    <div class="block blue" data-color="blue"></div>
     <script>
         function getIntRandom(min, max){
             return Math.floor(Math.random()*(max-min)+min);
@@ -53,6 +53,7 @@
         for (let i = 0; i < 5; i++) {
             let color = colors[getIntRandom(0, colors.length)];
             let circle = document.createElement('div');
+            circle.dataset.color = color;
             circle.style.background = color;
             circle.style.left = getIntRandom(200, window.innerWidth-300)+"px";
             circle.style.top = getIntRandom(200, window.innerHeight-300)+"px";
@@ -65,8 +66,15 @@
                     circle.style.left = e.clientX-50 + "px";
                     circle.style.top = e.clientY-50 + "px";
                 }
-                window.onmouseup = ()=>{
+                window.onmouseup = (ev)=>{
                     window.onmousemove = ()=>false;
+                    circle.hidden = true;
+                    let block = (document.elementFromPoint(ev.clientX, ev.clientY));
+                    console.log(block)
+                    circle.hidden = false;
+                    if(block.dataset.color == circle.dataset.color){
+                        circle.hidden = true;
+                    }
                 }
             }
         }

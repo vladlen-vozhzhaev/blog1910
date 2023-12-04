@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="f4f4f4d9-e8c8-4283-a976-4818a09ba354" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/parachute.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/plane.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/blocks.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/ex1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/ex2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/ex3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/plane.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/router.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/mainPage.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/reg.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/site.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/classes/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/getUserData.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/blocks.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/blocks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/handlerLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/handlerLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/handlerReg.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/handlerReg.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router.php" beforeDir="false" afterPath="$PROJECT_DIR$/router.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/reg.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/reg.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,14 +39,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\OSPanel\domains\site1910\img" />

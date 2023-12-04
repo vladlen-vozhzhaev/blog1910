@@ -7,8 +7,8 @@
     $mysqli = new mysqli("127.0.0.1", "root", "", "blog1910");
     $result = $mysqli->query("SELECT * FROM users WHERE email = '$email'");
     if($result->num_rows){
-        echo "exist"; // Существует
+        echo json_encode(['result'=>"exist"]); // Существует
     }else{
         $mysqli->query("INSERT INTO users (name, lastname, email, pass) VALUES ('$name','$lastname','$email','$pass')");
-        echo "success!";
+        echo json_encode(['result'=>"success!"]);
     }

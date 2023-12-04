@@ -1,7 +1,7 @@
 <div class="container my-5">
   <h1 class="text-center my-3">Регистрация на сайте</h1>
   <div class="col-sm-6 mx-auto">
-    <form action="/php/handlerReg.php" method="post">
+    <form onsubmit="sendForm(this); return false;" action="/php/handlerReg.php" method="post">
       <div class="mb-3">
         <input required name="name" type="text" class="form-control" placeholder="Имя">
       </div>
@@ -10,6 +10,7 @@
       </div>
       <div class="mb-3">
         <input required name="email" type="email" class="form-control" placeholder="Email">
+        <p class="text-danger" hidden id="info">Такой пользователь уже существует</p>
       </div>
       <div class="mb-3">
         <input required name="pass" type="password" class="form-control" placeholder="Пароль">
@@ -20,3 +21,22 @@
     </form>
   </div>
 </div>
+<script>
+  const info = document.getElementById('info');
+  function sendForm(form){
+    info.hidden = true;
+    const formData = new FormData(form);
+    fetch("/reg", {
+      method: "POST",
+      body: formData
+    }).then(response=>response.json())
+            .then(result=>{
+              console.log(result)
+              if(result.result == "success"){
+                location.href = '/login';
+              }else if(result.result == "exist"){
+                info.hidden = false;
+              }
+            })
+  }
+</script>
