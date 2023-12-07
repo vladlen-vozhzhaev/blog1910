@@ -22,17 +22,17 @@
                     <a class="nav-link" href="traffic_light.html">Светофор</a>
                 </li>
             </ul>
-            <? if(empty($_SESSION['id'])): ?>
-                <a class="btn btn-primary me-3" href="/reg.php">Регистрация</a>
-                <a class="btn btn-success" href="/login.php">Вход</a>
-            <? else: ?>
-                <a class="btn btn-success me-3" href="/profile.php">Профиль</a>
+            <?php if(empty($_SESSION['id'])): ?>
+                <a class="btn btn-primary me-3" href="/reg">Регистрация</a>
+                <a class="btn btn-success" href="/login">Вход</a>
+            <?php else: ?>
+                <a class="btn btn-success me-3" href="/profile">Профиль</a>
                 <a class="btn btn-success" href="/exit.php">Выход</a>
-            <? endif; ?>
+            <?php endif; ?>
         </div>
     </div>
 </nav>
-    <? echo $content; ?>
+    <?php echo $content; ?>
 <footer class="container-fluid py-5 bg-dark text-white">
     <p class="text-center">&copy; 2023 группа 1910</p>
 </footer>

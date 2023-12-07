@@ -1,0 +1,19 @@
+<div class="container my-5">
+  <div class="col-sm-9 mx-auto" id="articleBox"></div>
+</div>
+<script>
+  const articleId = location.pathname.split('/')[2];
+  fetch('/getArticle/'+articleId)
+    .then(response=>response.json())
+    .then(result=>{
+      console.log(result);
+      const h3 = document.createElement('h3');
+      h3.classList.add('text-center', 'my-3');
+      const div = document.createElement('div');
+      const p = document.createElement('p');
+      h3.innerText = result.title;
+      div.innerText = result.content;
+      p.innerText = result.author;
+      articleBox.append(h3, div, p);
+    })
+</script>

@@ -5,16 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4f4f4d9-e8c8-4283-a976-4818a09ba354" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/php/classes/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/getUserData.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/classes/Blog.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/addArticle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/views/article.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/blocks.html" beforeDir="false" afterPath="$PROJECT_DIR$/js/blocks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/handlerLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/handlerLogin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/handlerReg.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/handlerReg.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/addArticle.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact-us.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/containers.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/footer.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/handlerAddArticle.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/handlerLogin.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/handlerReg.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/profile.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/reg.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/router.php" beforeDir="false" afterPath="$PROJECT_DIR$/router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/reg.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/reg.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/template.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/mainPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/mainPage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +44,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\OSPanel\modules\php\PHP_8.1\php.exe" />
   <component name="ProjectId" id="2YtYkVsHSUuj6HCw1viU0gIN0h8" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -41,10 +52,15 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/OSPanel/domains/blog1910",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)"
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -61,6 +77,7 @@
       <option name="presentableId" value="Default" />
       <updated>1701346485828</updated>
       <workItem from="1701346488239" duration="4227000" />
+      <workItem from="1701951183199" duration="4437000" />
     </task>
     <servers />
   </component>
