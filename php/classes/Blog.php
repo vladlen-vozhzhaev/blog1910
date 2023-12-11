@@ -21,6 +21,6 @@ class Blog{
         $content = $_POST['content'];
         $author = $_POST['author'];
         $mysqli->query("INSERT INTO articles (title, content, author) VALUES ('$title','$content','$author')");
-        header("Location: /");
+        return json_encode(['result'=>'success']);
     }
 }

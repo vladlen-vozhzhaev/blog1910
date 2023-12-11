@@ -19,7 +19,7 @@
   const info = window.document.getElementById("info");
   function sendForm(form){
     const formData = new FormData(form);
-    fetch("/php/handlerLogin.php", {
+    fetch("/login", {
       method:"POST",
       body: formData
     }).then(response=>response.json())

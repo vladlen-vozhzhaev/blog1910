@@ -16,7 +16,7 @@
                 const p = document.createElement('p');
                 const hr = document.createElement('hr');
                 h3.innerText = result[i].title;
-                div.innerText = result[i].content;
+                div.innerHTML = result[i].content;
                 p.innerText = result[i].author;
                 articleBox.append(h3, div, p, hr);
             }

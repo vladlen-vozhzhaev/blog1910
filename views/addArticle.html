@@ -1,19 +1,53 @@
 <div class="container my-5">
     <h1 class="text-center my-3">Добавление статьи на сайт</h1>
-    <div class="col-sm-6 mx-auto">
-        <form action="/addArticle" method="post">
-            <div class="mb-3">
-                <input required name="title" type="text" class="form-control" placeholder="Заголвок статьи">
-            </div>
-            <div class="mb-3">
-                <textarea name="content" class="form-control" placeholder="Текст статьи"></textarea>
-            </div>
-            <div class="mb-3">
-                <input required name="author" type="text" class="form-control" placeholder="Автор">
-            </div>
-            <div class="mb-3">
-                <input type="submit" class="form-control btn btn-primary" value="Добавить статью">
-            </div>
-        </form>
-    </div>
+    <form onsubmit="sendForm(this); return false;">
+        <div class="mb-3">
+            <input required name="title" type="text" class="form-control" placeholder="Заголвок статьи">
+        </div>
+        <div class="mb-3">
+            <textarea id="sample"></textarea>
+        </div>
+        <div class="mb-3">
+            <input required name="author" type="text" class="form-control" placeholder="Автор">
+        </div>
+        <div class="mb-3">
+            <input type="submit" class="form-control btn btn-primary" value="Добавить статью">
+        </div>
+    </form>
 </div>
+
+<link href="https://cdn.jsdelivr.net/npm/suneditor@latest/dist/css/suneditor.min.css" rel="stylesheet">
+<!-- <link href="https://cdn.jsdelivr.net/npm/suneditor@latest/assets/css/suneditor.css" rel="stylesheet"> -->
+<!-- <link href="https://cdn.jsdelivr.net/npm/suneditor@latest/assets/css/suneditor-contents.css" rel="stylesheet"> -->
+<script src="https://cdn.jsdelivr.net/npm/suneditor@latest/dist/suneditor.min.js"></script>
+<!-- languages (Basic Language: English/en) -->
+<script src="https://cdn.jsdelivr.net/npm/suneditor@latest/src/lang/ko.js"></script>
+<script>
+    /**
+     * ID : 'suneditor_sample'
+     * ClassName : 'sun-eidtor'
+     */
+// ID or DOM object
+    const editor = SUNEDITOR.create((document.getElementById('sample') || 'sample'),{
+        // All of the plugins are loaded in the "window.SUNEDITOR" object in dist/suneditor.min.js file
+        // Insert options
+        // Language global object (default: en)
+        lang: SUNEDITOR_LANG['ko'],
+        width: "100%",
+        height: "400px",
+    });
+
+    function sendForm(form){
+        const formData = new FormData(form);
+        formData.append('content', editor.getContents());
+        fetch('/addArticle', {
+            method: 'POST',
+            body: formData
+        }).then(response=>response.json())
+            .then(result=>{
+                if(result.result == "success"){
+                    location.href = '/';
+                }
+            })
+    }
+</script>
