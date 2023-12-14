@@ -1,14 +1,27 @@
 <div class="container my-5">
-    <p><strong>Имя: </strong><span id="name"></span></p>
-    <p><strong>Фамилия: </strong><span id="lastname"></span></p>
-    <p><strong>Email: </strong><span id="email"></span></p>
-    <p><strong>ID: </strong><span id="userId"></span></p>
+    <div class="row">
+        <div class="col-sm-3 text-center">
+            <img src="" alt="" id="userAvatar" width="90%">
+            <form action="/changeUserAvatar" method="post" enctype="multipart/form-data">
+                <input name="user_avatar" type="file" class="form-control">
+                <input type="submit" value="заргузить" class="btn btn-primary form-control">
+            </form>
+        </div>
+        <div class="col-sm-9">
+            <p><strong>Имя: </strong><span id="name"></span></p>
+            <p><strong>Фамилия: </strong><span id="lastname"></span></p>
+            <p><strong>Email: </strong><span id="email"></span></p>
+            <p><strong>ID: </strong><span id="userId"></span></p>
+        </div>
+    </div>
+
 </div>
 <script>
     const name = document.getElementById('name');
     const lastname = document.getElementById('lastname');
     const email = document.getElementById('email');
     const userId = document.getElementById('userId');
+    const userAvatar = document.getElementById('userAvatar');
     fetch('/php/getUserData.php')
         .then(response=>response.json())
         .then(result=>{
@@ -17,5 +30,6 @@
             lastname.innerText = result.lastname;
             email.innerText = result.email;
             userId.innerText = result.id;
+            userAvatar.src = result.img;
         })
 </script>

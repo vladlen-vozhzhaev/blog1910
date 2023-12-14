@@ -4,22 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4f4f4d9-e8c8-4283-a976-4818a09ba354" name="Changes" comment="add new route">
-      <change afterPath="$PROJECT_DIR$/assets/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/about-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/contact-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/home-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/post-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/img/post-sample-image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/php/classes/Route.php" afterDir="false" />
+    <list default="true" id="f4f4f4d9-e8c8-4283-a976-4818a09ba354" name="Changes" comment="add sunEditor">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/classes/Blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/classes/Blog.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/classes/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/classes/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/router.php" beforeDir="false" afterPath="$PROJECT_DIR$/router.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/template.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/addArticle.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/addArticle.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +68,8 @@
       <workItem from="1701951183199" duration="4953000" />
       <workItem from="1701966970930" duration="7000" />
       <workItem from="1702295976507" duration="3347000" />
-      <workItem from="1702299738848" duration="994000" />
+      <workItem from="1702299738848" duration="1733000" />
+      <workItem from="1702555097329" duration="4900000" />
     </task>
     <task id="LOCAL-00001" summary="add new route">
       <option name="closed" value="true" />
@@ -88,7 +79,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701955676290</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add sunEditor">
+      <option name="closed" value="true" />
+      <created>1702301027860</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1702301027860</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,6 +106,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add new route" />
-    <option name="LAST_COMMIT_MESSAGE" value="add new route" />
+    <MESSAGE value="add seuEditor" />
+    <MESSAGE value="add sunEditor" />
+    <option name="LAST_COMMIT_MESSAGE" value="add sunEditor" />
   </component>
 </project>

@@ -17,7 +17,6 @@ class User{
     }
     public static function login(){
         global $mysqli;
-        session_start();
         $email = $_POST['email'];
         $pass = $_POST['pass'];
         $result = $mysqli->query("SELECT * FROM users WHERE email='$email'");
@@ -27,9 +26,24 @@ class User{
             $_SESSION['lastname'] = $row['lastname'];
             $_SESSION['id'] = $row['id'];
             $_SESSION['email'] = $row['email'];
+            $_SESSION['img'] = $row['img'];
             return json_encode(['result'=>'success']);
         }else{
             return json_encode(['result'=>'error']);
+        }
+    }
+    public static function changeUserAvatar(){
+        global $mysqli;
+        $userId = $_SESSION['id'];
+        $userAvatar = $_FILES['user_avatar'];
+            $dir = 'img/user_avatar/'.$userAvatar['name'];
+        if($userAvatar['type'] == "image/jpeg"){
+            move_uploaded_file($_FILES['user_avatar']['tmp_name'], $dir);
+            $mysqli->query("UPDATE users SET img='/$dir' WHERE id = '$userId'");
+            $_SESSION['img'] = "/$dir";
+            header('Location: /profile');
+        }else{
+            echo "Недопустимое расширение файла";
         }
     }
 }

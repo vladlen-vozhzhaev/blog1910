@@ -12,12 +12,18 @@ Route::view("/", 'views/mainPage.html');
 Route::view("/reg", 'views/reg.html');
 Route::view('/login', 'views/login.html');
 Route::view('/profile','views/profile.html');
-Route::view('/blog', 'views/article.html');
+
 Route::view('/addArticle', 'views/addArticle.html');
 
 Route::get('/getArticles', function (){return Blog::getArticles();});
-Route::get('/getArticle', function (){global $path; return Blog::getArticle($path[2]);});
+
 
 Route::post('/reg', function(){return User::reg();});
 Route::post('/login', function (){return User::login();});
 Route::post('/addArticle', function (){return Blog::addArticle();});
+Route::post('/changeUserAvatar', function (){return User::changeUserAvatar();});
+
+if(count($path) > 2){
+    Route::view('/blog/'.$path[2], 'views/article.html');
+    Route::get('/getArticle/'.$path[2], function (){global $path; return Blog::getArticle($path[2]);});
+}
