@@ -20,7 +20,21 @@ class Blog{
         $title = $_POST['title'];
         $content = $_POST['content'];
         $author = $_POST['author'];
-        $mysqli->query("INSERT INTO articles (title, content, author) VALUES ('$title','$content','$author')");
+        // Create a DOM object
+        $html = new simple_html_dom();
+        // Load HTML from a string
+        $html->load($content);
+        $img = $html->find('img', 0);
+        $src = $img->src;
+        $base64DATA = explode(',', $src)[1];
+        //data:image/jpeg;base64
+        $extension = explode(';',explode('/', explode(',', $src)[0])[1])[0];
+        $dir = "img/blog_image/".md5(microtime()).'.'.$extension;
+        $ifp = fopen( $dir, 'wb' );
+        fwrite($ifp, base64_decode($base64DATA));
+        fclose($ifp);
+        $img->src = '/'.$dir;
+        $mysqli->query("INSERT INTO articles (title, content, author) VALUES ('$title','$html','$author')");
         return json_encode(['result'=>'success']);
     }
 }

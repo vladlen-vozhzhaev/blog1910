@@ -36,7 +36,7 @@ class User{
         global $mysqli;
         $userId = $_SESSION['id'];
         $userAvatar = $_FILES['user_avatar'];
-            $dir = 'img/user_avatar/'.$userAvatar['name'];
+        $dir = 'img/user_avatar/'.md5(microtime()).$userAvatar['name'];
         if($userAvatar['type'] == "image/jpeg"){
             move_uploaded_file($_FILES['user_avatar']['tmp_name'], $dir);
             $mysqli->query("UPDATE users SET img='/$dir' WHERE id = '$userId'");

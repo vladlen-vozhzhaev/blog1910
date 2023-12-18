@@ -2,6 +2,7 @@
   <div class="col-sm-9 mx-auto" id="articleBox"></div>
 </div>
 <script>
+  const articleBox = document.getElementById('articleBox');
   const articleId = location.pathname.split('/')[2];
   fetch('/getArticle/'+articleId)
     .then(response=>response.json())

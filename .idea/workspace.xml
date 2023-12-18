@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f4f4f4d9-e8c8-4283-a976-4818a09ba354" name="Changes" comment="add sunEditor">
+    <list default="true" id="f4f4f4d9-e8c8-4283-a976-4818a09ba354" name="Changes" comment="add changeuserAvatar">
+      <change afterPath="$PROJECT_DIR$/php/classes/simple_html_dom.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/classes/Blog.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/classes/Blog.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/classes/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/classes/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/router.php" beforeDir="false" afterPath="$PROJECT_DIR$/router.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template.php" beforeDir="false" afterPath="$PROJECT_DIR$/template.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/profile.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/addArticle.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/addArticle.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/article.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/article.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +55,7 @@
       <recent name="C:\OSPanel\domains\blog1910" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\OSPanel\domains\blog1910\php\classes" />
       <recent name="C:\OSPanel\domains\site1910\img" />
     </key>
   </component>
@@ -69,7 +72,8 @@
       <workItem from="1701966970930" duration="7000" />
       <workItem from="1702295976507" duration="3347000" />
       <workItem from="1702299738848" duration="1733000" />
-      <workItem from="1702555097329" duration="4900000" />
+      <workItem from="1702555097329" duration="5674000" />
+      <workItem from="1702900798812" duration="4520000" />
     </task>
     <task id="LOCAL-00001" summary="add new route">
       <option name="closed" value="true" />
@@ -87,7 +91,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702301027860</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add changeuserAvatar">
+      <option name="closed" value="true" />
+      <created>1702560409914</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702560409914</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,6 +120,7 @@
     <MESSAGE value="add new route" />
     <MESSAGE value="add seuEditor" />
     <MESSAGE value="add sunEditor" />
-    <option name="LAST_COMMIT_MESSAGE" value="add sunEditor" />
+    <MESSAGE value="add changeuserAvatar" />
+    <option name="LAST_COMMIT_MESSAGE" value="add changeuserAvatar" />
   </component>
 </project>
